@@ -81,6 +81,8 @@ topology:
       kind: linux
       mgmt-ipv4: 172.80.80.41
       image: ghcr.io/openconfig/gnmic:0.45.0
+      labels:
+        c9s.run/exposePorts: "9273/tcp"
       binds:
         - configs/gnmic/gnmic-config.yml:/gnmic-config.yml:ro
       cmd: --config /gnmic-config.yml --log subscribe
